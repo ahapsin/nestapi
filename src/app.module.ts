@@ -3,6 +3,7 @@ import { AppService } from './app.service';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
+import { ItemsModule } from './items/items.module';
 
 @Module({
   controllers: [AppController],
@@ -19,6 +20,7 @@ import { UsersModule } from './users/users.module';
       synchronize: true,
     }),
     UsersModule,
+    ItemsModule,
   ],
 })
 export class AppModule {}
